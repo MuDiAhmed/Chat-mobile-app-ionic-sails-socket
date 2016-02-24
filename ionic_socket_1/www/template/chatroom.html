@@ -1,0 +1,23 @@
+<ion-view view-title="{{room.name}}" cache-view="false">
+    <ion-content class="padding chat_wrapper has-header has-footer">
+        <div class="messages_wrapper">
+            <ion-list>
+                <ion-item ng-repeat="message in messages">
+                    {{message.text}}
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
+<div class="form_wrapper bar bar-footer">
+    <!--<form ng-submit="send_message()">-->
+    <!--<input type="text" ng-model="messsage" placeholder="Message">-->
+    <!--<input type="submit" value="Send">-->
+    <!--</form>-->
+    <label class="item item-input">
+        <input type="text" ng-model="message.text" placeholder="Message">
+    </label>
+    <button class="button button-positive" ng-click="sendMessage(message)">
+        Send Message
+    </button>
+</div>

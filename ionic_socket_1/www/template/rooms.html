@@ -1,0 +1,29 @@
+<ion-view view-title="Rooms" cache-view="false">
+    <ion-content class="content has-header padding">
+        <button class="button button-block button-positive" ui-sref="roomsForm">
+            Create Room
+        </button>
+        <ion-list>
+            <ion-item ng-repeat="room in rooms" ui-sref="chatroom({ id: room.id })">
+                {{room.name}}
+            </ion-item>
+        </ion-list>
+        <!--<ion-slide-box on-slide-changed="slideHasChanged($index)">-->
+            <!--<ion-slide>-->
+                <!--<ion-list>-->
+                    <!--<ion-item ng-repeat="room in rooms" ng-click="enterRoom(room.name)">-->
+                        <!--{{room.name}}-->
+                    <!--</ion-item>-->
+                <!--</ion-list>-->
+            <!--</ion-slide>-->
+            <!--<ion-slide>-->
+                <!--<label class="item item-input">-->
+                    <!--<input type="text" ng-model="room" placeholder="Room Name">-->
+                <!--</label>-->
+                <!--<button class="button button-block button-positive" ng-click="createRoom(room)">-->
+                    <!--Create Room-->
+                <!--</button>-->
+            <!--</ion-slide>-->
+        <!--</ion-slide-box>-->
+    </ion-content>
+</ion-view>
